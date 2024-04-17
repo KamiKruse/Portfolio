@@ -1,0 +1,32 @@
+{
+  "name": "caltrack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "concurrently \"npx tailwindcss -i ./src/input.css -o ./public/css/style.css --watch\" \"nodemon index.js\"",
+    "prettier": "npx prettier --write **/*.html",
+    "browser-sync": "browser-sync start --proxy 'localhost:4000' --files '**/*.ejs'",
+    "dev": "concurrently \"npm run watch\" \"npm run browser-sync\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
+    "browser-sync": "^3.0.2",
+    "concurrently": "^8.2.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.13"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}
